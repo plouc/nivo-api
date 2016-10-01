@@ -5,6 +5,9 @@
   "description": "Rendering API for nivo dataviz React/d3 components",
   "author": "Raphaël Benitte <benitteraphael@gmail.com>",
   "main": "app.js",
+  "engines": {
+    "node": "6.x"
+  },
   "devDependencies": {
     "mustache": "2.2.1"
   },
