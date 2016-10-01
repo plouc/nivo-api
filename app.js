@@ -23,6 +23,7 @@ app.get('/status', (req, res) => {
     res.status(200).json({
         status: 'ok',
         uptime: `${process.uptime()} second(s)`,
+        host:   req.get('host'),
         env:    {
             NODE_ENV: process.NODE_ENV,
         },
