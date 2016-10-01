@@ -60,6 +60,7 @@ app.get('/r/:id', (req, res) => {
     res.status(200).send(rendered)
 })
 
-app.listen(3000, () => {
-    console.log('nivo api listening on port 3000')
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log(`nivo api listening on port ${port}`)
 })
