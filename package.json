@@ -17,7 +17,7 @@
     "express": "4.14.0",
     "joi": "9.1.0",
     "lodash": "4.16.2",
-    "nivo": "1.0.0-alpha.0",
+    "nivo": "1.0.0-alpha.1",
     "node-uuid": "1.4.7",
     "react": "15.3.2",
     "react-dom": "15.3.2"
