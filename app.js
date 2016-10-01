@@ -1,17 +1,19 @@
-const express            = require('express')
-const cors               = require('cors')
-const bodyParser         = require('body-parser')
-const path               = require('path')
-const uuid               = require('node-uuid')
-const _                  = require('lodash')
-const React              = require('react')
-const { renderToString } = require('react-dom/server')
-const app                = express()
-const validate           = require('./lib/middlewares/validationMiddleware')
-const storage            = require('./lib/storage')
-const mapping            = require('./mapping')
+const express    = require('express')
+const cors       = require('cors')
+const bodyParser = require('body-parser')
+const path       = require('path')
+const uuid       = require('node-uuid')
+const _          = require('lodash')
+const app        = express()
+const validate   = require('./lib/middlewares/validationMiddleware')
+const storage    = require('./lib/storage')
+const mapping    = require('./mapping')
+const samples    = require('./samples')
+const render     = require('./lib/render')
+
 
 app.enable('trust proxy')
+app.set('json spaces', 4)
 app.use(cors())
 app.use(bodyParser.json())
 
@@ -59,17 +61,17 @@ app.get('/r/:id', (req, res) => {
         return res.status(404).send(`no chart found for id "${id}"`)
     }
 
-    const chart    = mapping[config.type]
-    const rendered = renderToString(
-        React.createElement(chart.component, Object.assign(
-            {},
-            chart.defaults,
-            config.props,
-            _.pick(req.query, ['width', 'height', 'colors'])
-        ))
-    )
+    const rendered = render.chart(config, req.query)
 
     res.status(200).send(rendered)
+})
+
+_.forOwn(samples, (config, id) => {
+    app.get(`/samples/${id}`, (req, res) => {
+        const rendered = render.chart(config, req.query)
+
+        res.status(200).send(rendered)
+    })
 })
 
 const port = process.env.PORT || 3000
