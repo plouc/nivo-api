@@ -35,7 +35,7 @@ _.forOwn(mapping, ({ schema }, type) => {
     app.post(`/charts/${type}`, validate(schema), (req, res) => {
         const props = req.payload
         const id    = uuid.v4()
-        const url   = `http://localhost:3000/r/${id}`
+        const url   = `${req.protocol}://${req.get('host')}/r/${id}`
 
         storage.set(id, {
             type,
