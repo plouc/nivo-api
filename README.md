@@ -4,7 +4,7 @@ Rendering API for nivo dataviz React/d3 components.
 
 ## How it works
 
-The API expose some of the nivo charts by using `react-dom/server`.
+The API expose some of the [nivo](https://github.com/plouc/nivo-api) charts by using [React server side environment](https://facebook.github.io/react/docs/environments.html).
 
 First you will have to make a post request on the desired endpoint, for example:
 
