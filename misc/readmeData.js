@@ -1,11 +1,11 @@
-const _             = require('lodash')
-const chartsMapping = require('../chartsMapping')
+const _       = require('lodash')
+const mapping = require('../mapping')
 
 const data = {
     endpoints: [],
 }
 
-_.forOwn(chartsMapping, (config, type) => {
+_.forOwn(mapping, (config, type) => {
     data.endpoints.push(`/charts/${type}`)
 })
 

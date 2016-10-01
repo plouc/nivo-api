@@ -9,7 +9,7 @@ const { renderToString } = require('react-dom/server')
 const app                = express()
 const validate           = require('./lib/middlewares/validationMiddleware')
 const storage            = require('./lib/storage')
-const chartsMapping      = require('./chartsMapping')
+const mapping            = require('./mapping')
 
 
 app.use(cors())
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('api.yml'))
 })
 
-_.forOwn(chartsMapping, ({ schema }, type) => {
+_.forOwn(mapping, ({ schema }, type) => {
     app.post(`/charts/${type}`, validate(schema), (req, res) => {
         const props = req.payload
         const id    = uuid.v4()
@@ -47,7 +47,7 @@ app.get('/r/:id', (req, res) => {
         return res.status(404).send(`no chart found for id "${id}"`)
     }
 
-    const chart    = chartsMapping[config.type]
+    const chart    = mapping[config.type]
     const rendered = renderToString(
         React.createElement(chart.component, Object.assign(
             {},
