@@ -1,0 +1,16 @@
+{
+  "name": "nivo-api",
+  "version": "1.0.0-alpha.0",
+  "private": true,
+  "description": "Rendering API for nivo dataviz React/d3 components",
+  "author": "Raphaël Benitte <benitteraphael@gmail.com>",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "nivo": "*",
+    "react": "15.3.2",
+    "react-dom": "15.3.2"
+  },
+  "scripts": {
+  }
+}
