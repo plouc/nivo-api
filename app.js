@@ -19,6 +19,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('api.yml'))
 })
 
+app.get('/status', (req, res) => {
+    res.status(200).json({
+        status: 'ok',
+        uptime: `${process.uptime()} second(s)`,
+        env:    {
+            NODE_ENV: process.NODE_ENV,
+        },
+    })
+})
+
 _.forOwn(mapping, ({ schema }, type) => {
     app.post(`/charts/${type}`, validate(schema), (req, res) => {
         const props = req.payload
