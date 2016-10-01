@@ -8,12 +8,6 @@ basePath: /
 schemes:
   - http
 paths:
-  /samples/bubble:
-    get:
-      operationId: sampleBubble
-      responses:
-        200:
-          description: sample bubble
   /charts/line:
     post:
       operationId: lineChart

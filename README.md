@@ -26,4 +26,12 @@ GET /r/148e6145-6130-4c70-a21e-bfe91924c612
 ```
 POST /charts/bar
 POST /charts/line
+POST /charts/bubble
 ```
+
+## Repositories
+
+- [nivo](https://github.com/plouc/nivo), the nivo library
+- [nivo-api](https://github.com/plouc/nivo-api), the nivo http api
+- [nivo-generators](https://github.com/plouc/nivo-generators), the data generators used for nivo-website and http API samples
+- [nivo-website](https://github.com/plouc/nivo-website), the source for the nivo website
