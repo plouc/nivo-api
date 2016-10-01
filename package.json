@@ -4,7 +4,9 @@
   "private": true,
   "description": "Rendering API for nivo dataviz React/d3 components",
   "author": "Raphaël Benitte <benitteraphael@gmail.com>",
-  "devDependencies": {},
+  "devDependencies": {
+    "mustache": "2.2.1"
+  },
   "dependencies": {
     "body-parser": "1.15.2",
     "cors": "2.8.1",
@@ -16,5 +18,7 @@
     "react": "15.3.2",
     "react-dom": "15.3.2"
   },
-  "scripts": {}
+  "scripts": {
+    "readme": "node misc/readmeData.js | mustache - misc/README.mustache > README.md"
+  }
 }
