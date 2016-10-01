@@ -1,0 +1,67 @@
+swagger: "2.0"
+info:
+  title: nivo
+  version: 1.0.0
+  description: nivo API
+host: localhost:3000
+basePath: /
+schemes:
+  - http
+paths:
+  /charts/line:
+    post:
+      operationId: lineChart
+      parameters:
+        - name:     props
+          in:       body
+          required: true
+          schema:
+            type:       object
+            properties:
+              width:
+                type: integer
+              height:
+                type: integer
+              identity:
+                type: string
+      responses:
+        200:
+          description: line chart
+
+  /charts/bar:
+    post:
+      operationId: barChart
+      parameters:
+        - name:     props
+          in:       body
+          required: true
+          schema:
+            type:       object
+            properties:
+              width:
+                type: integer
+              height:
+                type: integer
+              identity:
+                type: string
+      responses:
+        200:
+          description: bar chart
+
+  /charts/bubble:
+    post:
+      operationId: bubbleChart
+      parameters:
+        - name:     props
+          in:       body
+          required: true
+          schema:
+            type:       object
+            properties:
+              width:
+                type: integer
+              height:
+                type: integer
+      responses:
+        200:
+          description: bubble chart
