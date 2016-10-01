@@ -11,7 +11,7 @@ const validate           = require('./lib/middlewares/validationMiddleware')
 const storage            = require('./lib/storage')
 const mapping            = require('./mapping')
 
-
+app.enable('trust proxy')
 app.use(cors())
 app.use(bodyParser.json())
 
