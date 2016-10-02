@@ -1,21 +1,34 @@
-const express    = require('express')
-const cors       = require('cors')
-const bodyParser = require('body-parser')
-const path       = require('path')
-const uuid       = require('node-uuid')
-const _          = require('lodash')
-const app        = express()
-const validate   = require('./lib/middlewares/validationMiddleware')
-const storage    = require('./lib/storage')
-const mapping    = require('./mapping')
-const samples    = require('./samples')
-const render     = require('./lib/render')
+const express        = require('express')
+const cors           = require('cors')
+const bodyParser     = require('body-parser')
+const path           = require('path')
+const uuid           = require('node-uuid')
+const _              = require('lodash')
+const winston        = require('winston')
+const expressWinston = require('express-winston')
+const app            = express()
+const validate       = require('./lib/middlewares/validationMiddleware')
+const storage        = require('./lib/storage')
+const mapping        = require('./mapping')
+const samples        = require('./samples')
+const render         = require('./lib/render')
 
 
 app.enable('trust proxy')
 app.set('json spaces', 4)
 app.use(cors())
 app.use(bodyParser.json())
+app.use(expressWinston.logger({
+    transports: [
+        new winston.transports.Console({
+            json:     false,
+            colorize: true,
+        })
+    ],
+    meta:          false,
+    expressFormat: true,
+    colorize:      true,
+}))
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve('api.yml'))
