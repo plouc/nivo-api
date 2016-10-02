@@ -31,6 +31,6 @@ module.exports = {
     ],
     defaults:     {
         animate: false,
-        margin:  { top: 40, right: 50, bottom: 40, left: 50 }
+        margin:  { top: 40, right: 50, bottom: 40, left: 50 },
     },
 }

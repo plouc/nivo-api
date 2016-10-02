@@ -52,4 +52,20 @@ module.exports = {
             colors:   'nivo',
         },
     },
+    treemap: {
+        type:  'treemap',
+        props: {
+            type:         'treemap',
+            width:        800,
+            height:       500,
+            root:         generateLibTree(),
+            identity:     'name',
+            value:        'loc',
+            label:        'loc',
+            labelFormat:  '.0s',
+            leavesOnly:   false,
+            innerPadding: 3,
+            outerPadding: 3,
+        },
+    },
 }

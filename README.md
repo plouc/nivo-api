@@ -27,6 +27,7 @@ GET /r/148e6145-6130-4c70-a21e-bfe91924c612
 POST /charts/bar
 POST /charts/line
 POST /charts/bubble
+POST /charts/treemap
 ```
 
 ## Charts samples
@@ -34,6 +35,7 @@ POST /charts/bubble
 - https://nivo-api.herokuapp.com/samples/line
 - https://nivo-api.herokuapp.com/samples/bar
 - https://nivo-api.herokuapp.com/samples/bubble
+- https://nivo-api.herokuapp.com/samples/treemap
 
 ## Repositories
 

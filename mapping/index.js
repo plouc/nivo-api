@@ -8,12 +8,15 @@
  */
 'use strict'
 
-const bar    = require('./bar')
-const line   = require('./line')
-const bubble = require('./bubble')
+const bar     = require('./bar')
+const line    = require('./line')
+const bubble  = require('./bubble')
+const treemap = require('./treemap')
+
 
 module.exports = {
     bar,
     line,
     bubble,
+    treemap,
 }
