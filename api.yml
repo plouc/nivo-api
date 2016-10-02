@@ -22,6 +22,10 @@ paths:
                 type: integer
               height:
                 type: integer
+              keys:
+                type:  array
+                items:
+                  type: string
               identity:
                 type: string
       responses:
@@ -42,6 +46,10 @@ paths:
                 type: integer
               height:
                 type: integer
+              keys:
+                type:  array
+                items:
+                  type: string
               identity:
                 type: string
       responses:
