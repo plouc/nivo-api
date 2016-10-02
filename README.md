@@ -31,6 +31,8 @@ POST /charts/bubble
 
 ## Charts samples
 
+- https://nivo-api.herokuapp.com/samples/line
+- https://nivo-api.herokuapp.com/samples/bar
 - https://nivo-api.herokuapp.com/samples/bubble
 
 ## Repositories
