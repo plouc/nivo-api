@@ -18,7 +18,7 @@
     "express-winston": "2.0.0",
     "joi": "9.1.0",
     "lodash": "4.16.2",
-    "nivo": "1.0.0-alpha.3",
+    "nivo": "1.0.0-alpha.4",
     "nivo-generators": "1.0.0-alpha.2",
     "node-uuid": "1.4.7",
     "react": "15.3.2",
