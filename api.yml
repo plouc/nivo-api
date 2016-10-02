@@ -17,6 +17,11 @@ paths:
           required: true
           schema:
             type:       object
+            required:
+              - width
+              - height
+              - keys
+              - identity
             properties:
               width:
                 type: integer
@@ -41,6 +46,11 @@ paths:
           required: true
           schema:
             type:       object
+            required:
+              - width
+              - height
+              - keys
+              - identity
             properties:
               width:
                 type: integer
@@ -65,6 +75,9 @@ paths:
           required: true
           schema:
             type:       object
+            required:
+              - width
+              - height
             properties:
               width:
                 type: integer
@@ -73,3 +86,43 @@ paths:
       responses:
         200:
           description: bubble chart
+
+  /charts/chord:
+    post:
+      operationId: chordChart
+      parameters:
+        - name:     props
+          in:       body
+          required: true
+          schema:
+            type:       object
+            required:
+              - width
+              - height
+              - data
+            properties:
+              width:
+                type: integer
+              height:
+                type: integer
+              data:
+                type: string
+              padAngle:
+                type: number
+              innerRadiusRatio:
+                type: number
+              innerRadiusOffset:
+                type: number
+              ribbonOpacity:
+                type: number
+              ribbonBorderWidth:
+                type: integer
+              arcOpacity:
+                type: number
+              arcBorderWidth:
+                type: integer
+              colors:
+                type: string
+      responses:
+        200:
+          description: chord diagram
