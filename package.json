@@ -15,15 +15,17 @@
     "body-parser": "1.15.2",
     "cors": "2.8.1",
     "express": "4.14.0",
+    "express-winston": "2.0.0",
     "joi": "9.1.0",
     "lodash": "4.16.2",
     "nivo": "1.0.0-alpha.1",
+    "nivo-generators": "1.0.0-alpha.1",
     "node-uuid": "1.4.7",
     "react": "15.3.2",
-    "react-dom": "15.3.2"
+    "react-dom": "15.3.2",
+    "winston": "2.2.0"
   },
   "scripts": {
-    "start": "node app.js",
-    "readme": "node misc/readmeData.js | mustache - misc/README.mustache > README.md"
+    "start": "node app.js"
   }
 }
