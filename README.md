@@ -28,6 +28,7 @@ POST /charts/bar
 POST /charts/line
 POST /charts/bubble
 POST /charts/treemap
+POST /charts/chord
 ```
 
 ## Charts samples
@@ -36,6 +37,7 @@ POST /charts/treemap
 - https://nivo-api.herokuapp.com/samples/bar
 - https://nivo-api.herokuapp.com/samples/bubble
 - https://nivo-api.herokuapp.com/samples/treemap
+- https://nivo-api.herokuapp.com/samples/chord
 
 ## Repositories
 
