@@ -66,6 +66,7 @@ module.exports = {
             leavesOnly:   false,
             innerPadding: 3,
             outerPadding: 3,
+            colors:       'nivo',
         },
     },
 }
