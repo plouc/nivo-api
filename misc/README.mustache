@@ -11,14 +11,27 @@ The API expose some of the [nivo](https://github.com/plouc/nivo) charts by using
 First you will have to make a post request on the desired endpoint, for example:
 
 ```
-POST /charts/line
-=> 148e6145-6130-4c70-a21e-bfe91924c612
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \
+   "width": 500, \
+   "height": 500, \
+   "data": [ \
+     [223, 299, 345, 184], \
+     [123, 248, 65, 123], \
+     [412, 76, 187, 312], \
+     [97, 37, 502, 176] \
+   ] \
+ }' 'http://localhost:3000/charts/chord'
+=>
+{
+  "id": "73633fea-160e-4118-a534-377c3ed85254",
+  "url": "http://localhost:3000/r/73633fea-160e-4118-a534-377c3ed85254"
+}
 ```
 
-The response is the id of the chart config, then you can fetch it with a regular GET request
+The response is contains a link to the chart
 
 ```
-GET /r/148e6145-6130-4c70-a21e-bfe91924c612
+GET http://localhost:3000/r/73633fea-160e-4118-a534-377c3ed85254
 ```
 
 ## Charts endpoints
