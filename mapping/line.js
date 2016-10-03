@@ -14,14 +14,23 @@ const { Line } = require('nivo')
 
 module.exports = {
     component:    Line,
-    schema:         Joi.object().keys({
-        width:      Joi.number().integer().required(),
-        height:     Joi.number().integer().required(),
-        data:       Joi.object().required(),
-        keys:       Joi.array().sparse(false).min(1).unique().required(),
-        identity:   Joi.string().required(),
-        cumulative: Joi.boolean(),
-        colors:     Joi.string(),
+    schema:               Joi.object().keys({
+        width:            Joi.number().integer().required(),
+        height:           Joi.number().integer().required(),
+        data:             Joi.array().min(1).required(),
+        keys:             Joi.array().sparse(false).min(1).unique().required(),
+        identity:         Joi.string().required(),
+        cumulative:       Joi.boolean(),
+        curve:            Joi.string(),
+        xAxis:            Joi.boolean(),
+        xAxisOrientation: Joi.any().valid(['top', 'bottom']),
+        xAxisTickSize:    Joi.number(),
+        xAxisTickPadding: Joi.number(),
+        yAxis:            Joi.boolean(),
+        yAxisOrientation: Joi.any().valid(['left', 'right']),
+        yAxisTickSize:    Joi.number(),
+        yAxisTickPadding: Joi.number(),
+        colors:           Joi.string(),
     }),
     runtimeProps: [
         'width',

@@ -35,7 +35,6 @@ module.exports = {
         'innerRadiusOffset',
         'ribbonOpacity',
         'arcOpacity',
-        'arcBorderWidth',
         'colors',
     ],
     defaults:     {
