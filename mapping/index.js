@@ -8,11 +8,12 @@
  */
 'use strict'
 
-const bar     = require('./bar')
-const line    = require('./line')
-const bubble  = require('./bubble')
-const treemap = require('./treemap')
-const chord   = require('./chord')
+const bar      = require('./bar')
+const line     = require('./line')
+const bubble   = require('./bubble')
+const treemap  = require('./treemap')
+const calendar = require('./calendar')
+const chord    = require('./chord')
 
 
 module.exports = {
@@ -20,5 +21,6 @@ module.exports = {
     line,
     bubble,
     treemap,
+    calendar,
     chord,
 }

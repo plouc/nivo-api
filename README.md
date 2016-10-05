@@ -31,6 +31,7 @@ POST /charts/bar
 POST /charts/line
 POST /charts/bubble
 POST /charts/treemap
+POST /charts/calendar
 POST /charts/chord
 ```
 
@@ -46,5 +47,6 @@ POST /charts/chord
 
 - [nivo](https://github.com/plouc/nivo) - the nivo library
 - [nivo-api](https://github.com/plouc/nivo-api) - the nivo http api
+- [nivo-api-docker](https://github.com/plouc/nivo-api-docker) - a Docker image for the nivo http api
 - [nivo-generators](https://github.com/plouc/nivo-generators) - the data generators used for nivo-website and http API samples
 - [nivo-website](https://github.com/plouc/nivo-website) - the source for the nivo website
