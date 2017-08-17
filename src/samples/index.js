@@ -124,6 +124,9 @@ module.exports = {
         props: {
             width: 800,
             height: 800,
+            data: generateLibTree(),
+            identity: 'name',
+            value: 'loc',
         },
     },
     treemap: {
