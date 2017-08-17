@@ -1,0 +1,57 @@
+Arguments: 
+  /Users/raph/.nvm/versions/node/v7.6.0/bin/node /Users/raph/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/raph/.nvm/versions/node/v7.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/go/bin:/usr/local/go/bin:/Users/raph/.yarn/bin:/Users/raph/Library/Python/3.6/bin
+
+Yarn version: 
+  0.24.5
+
+Node version: 
+  7.6.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "nivo-api",
+    "version": "1.0.0-alpha.0",
+    "private": true,
+    "description": "Rendering API for nivo dataviz React/d3 components",
+    "author": "Raphaël Benitte <benitteraphael@gmail.com>",
+    "main": "app.js",
+    "engineStrict": true,
+    "engines": {
+      "node": ">=6.0.0"
+    },
+    "devDependencies": {
+      "mustache": "2.2.1"
+    },
+    "dependencies": {
+      "body-parser": "1.15.2",
+      "cors": "2.8.1",
+      "express": "4.14.0",
+      "express-winston": "2.0.0",
+      "joi": "9.1.0",
+      "lodash": "4.16.3",
+      "nivo": "^0.15.0",
+      "nivo-generators": "^0.4.0",
+      "node-uuid": "1.4.7",
+      "react": "^15.6.1",
+      "react-dom": "^15.6.1",
+      "winston": "2.2.0"
+    },
+    "scripts": {
+      "start": "node app.js"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir '/Users/raph/projects/nivo/nivo-api/node_modules/nivo'

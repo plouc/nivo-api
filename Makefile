@@ -7,4 +7,4 @@ readme: ## Generates README.md
 	@node misc/readmeData.js | $(MODULES_BIN)/mustache - misc/README.mustache > README.md
 
 watch: ## Starts api in watch mode
-	@$(MODULES_BIN)/nodemon app.js
+	@$(MODULES_BIN)/nodemon src/app.js

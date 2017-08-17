@@ -8,9 +8,8 @@
  */
 'use strict'
 
-const _   = require('lodash')
+const _ = require('lodash')
 const Joi = require('joi')
-
 
 module.exports = (schema, options = {}) => {
     const { omit } = options
@@ -26,7 +25,7 @@ module.exports = (schema, options = {}) => {
                 return res.status(400).json({
                     errors: err.details.map(({ message }) => {
                         return message
-                    })
+                    }),
                 })
             }
 

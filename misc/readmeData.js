@@ -8,13 +8,13 @@
  */
 'use strict'
 
-const _       = require('lodash')
-const mapping = require('../mapping')
-const samples = require('../samples')
+const _ = require('lodash')
+const mapping = require('../src/mapping')
+const samples = require('../src/samples')
 
 const data = {
     endpoints: [],
-    samples:   [],
+    samples: [],
 }
 
 _.forOwn(mapping, (config, type) => {
@@ -24,6 +24,5 @@ _.forOwn(mapping, (config, type) => {
 _.forOwn(samples, (config, id) => {
     data.samples.push(id)
 })
-
 
 console.log(JSON.stringify(data))

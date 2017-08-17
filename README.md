@@ -6,19 +6,25 @@ A [demo](https://nivo-api.herokuapp.com/) is available on heroku, but may not re
 
 ## How it works
 
-The API expose some of the [nivo](https://github.com/plouc/nivo) charts by using [React server side environment](https://facebook.github.io/react/docs/environments.html).
+The API expose some of the [nivo](https://github.com/plouc/nivo) charts by using
+[React server side environment](https://facebook.github.io/react/docs/environments.html).
 
 First you will have to make a post request on the desired endpoint, for example:
 
-```
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ "width": 500, "height": 500, "data": [[223, 299, 345, 184], [123, 248, 65, 123], [412, 76, 187, 312], [97, 37, 502, 176]]}' 'http://localhost:3000/charts/chord'
+```sh
+curl -X POST \
+  --header 'Content-Type: application/json' \
+  --header 'Accept: application/json' \
+  -d '{ "width": 500, "height": 500, "data": [[223, 299, 345, 184], [123, 248, 65, 123], [412, 76, 187, 312], [97, 37, 502, 176]]}' \
+  'http://localhost:3030/charts/chord'
+
 {
   "id": "73633fea-160e-4118-a534-377c3ed85254",
   "url": "http://localhost:3000/r/73633fea-160e-4118-a534-377c3ed85254"
 }
 ```
 
-The response is contains a link to the chart
+The response contains a link to the chart
 
 ```
 GET http://localhost:3000/r/73633fea-160e-4118-a534-377c3ed85254
@@ -28,20 +34,26 @@ GET http://localhost:3000/r/73633fea-160e-4118-a534-377c3ed85254
 
 ```
 POST /charts/bar
-POST /charts/line
 POST /charts/bubble
-POST /charts/treemap
 POST /charts/calendar
 POST /charts/chord
+POST /charts/line
+POST /charts/pie
+POST /charts/radar
+POST /charts/sunburst
+POST /charts/treemap
 ```
 
 ## Charts samples
 
-- https://nivo-api.herokuapp.com/samples/line
-- https://nivo-api.herokuapp.com/samples/bar
-- https://nivo-api.herokuapp.com/samples/bubble
-- https://nivo-api.herokuapp.com/samples/treemap
-- https://nivo-api.herokuapp.com/samples/chord
+- https://nivo-api.herokuapp.com/samples/line.svg
+- https://nivo-api.herokuapp.com/samples/bar.svg
+- https://nivo-api.herokuapp.com/samples/bubble.svg
+- https://nivo-api.herokuapp.com/samples/chord.svg
+- https://nivo-api.herokuapp.com/samples/pie.svg
+- https://nivo-api.herokuapp.com/samples/radar.svg
+- https://nivo-api.herokuapp.com/samples/sunburst.svg
+- https://nivo-api.herokuapp.com/samples/treemap.svg
 
 ## Repositories
 

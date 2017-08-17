@@ -10,7 +10,6 @@
 
 const store = {}
 
-
 exports.set = (key, value) => {
     store[key] = value
 }
