@@ -12,20 +12,11 @@ const {
     generateLibTree,
     generateDrinkStats,
     generateCountriesData,
-    randColor,
-    generateSerie,
     generateProgrammingLanguageStats,
+    generateWinesTastes,
 } = require('nivo-generators')
 
 const keys = ['hot dogs', 'burgers', 'sandwich', 'kebab', 'fries', 'donut']
-
-const radarFacets = ['fruity', 'bitter', 'heavy', 'strong', 'sunny']
-const generateRadarData = () =>
-    ['chardonay', 'carmenere', 'syrah'].map(id => ({
-        id,
-        color: randColor(),
-        data: generateSerie(radarFacets.length),
-    }))
 
 module.exports = {
     line: {
@@ -110,14 +101,16 @@ module.exports = {
     },
     radar: {
         type: 'radar',
-        props: {
-            width: 800,
-            height: 800,
-            data: generateRadarData(),
-            facets: radarFacets,
-            curve: 'catmullRomClosed',
-            enableMarkersLabel: true,
-        },
+        props: Object.assign(
+            {
+                width: 800,
+                height: 800,
+                indexBy: 'taste',
+                curve: 'catmullRomClosed',
+                enableMarkersLabel: true,
+            },
+            generateWinesTastes()
+        ),
     },
     sunburst: {
         type: 'sunburst',

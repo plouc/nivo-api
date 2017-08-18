@@ -18,7 +18,8 @@ module.exports = {
         Object.assign({}, common.dimensions, {
             // data
             data: Joi.array().min(1).required(),
-            facets: Joi.array().sparse(false).min(1).unique().required(),
+            keys: Joi.array().sparse(false).min(1).unique().required(),
+            indexBy: Joi.string().required(),
 
             curve: Joi.string(),
 

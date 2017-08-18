@@ -1448,9 +1448,9 @@ nested-error-stacks@^1.0.0:
   dependencies:
     inherits "~2.0.1"
 
-nivo-generators@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/nivo-generators/-/nivo-generators-0.4.0.tgz#31e3296064a259c0c5588b59c09c560b495f5f2e"
+nivo-generators@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/nivo-generators/-/nivo-generators-0.6.0.tgz#ff7dfad1b7583947ed0a1699a99408286507149d"
   dependencies:
     d3-time "^1.0.7"
     d3-time-format "^2.0.5"
@@ -1458,9 +1458,9 @@ nivo-generators@^0.4.0:
     lodash.range "^3.2.0"
     lodash.shuffle "^4.2.0"
 
-nivo@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/nivo/-/nivo-0.15.0.tgz#57c7ddbbb3cfcebea085bb00c2045a973eddb674"
+nivo@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/nivo/-/nivo-0.17.0.tgz#2da78128aa567a2f4ca2de5d0d7a3628df526ad5"
   dependencies:
     d3-chord "^1.0.4"
     d3-color "^1.0.3"
