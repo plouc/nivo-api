@@ -424,6 +424,14 @@ d3-path@1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/d3-path/-/d3-path-1.0.5.tgz#241eb1849bd9e9e8021c0d0a799f8a0e8e441764"
 
+d3-sankey@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/d3-sankey/-/d3-sankey-0.7.1.tgz#d229832268fc69a7fec84803e96c2256a614c521"
+  dependencies:
+    d3-array "1"
+    d3-collection "1"
+    d3-shape "^1.2.0"
+
 d3-scale-chromatic@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/d3-scale-chromatic/-/d3-scale-chromatic-1.1.1.tgz#811406e8e09dab78a49dac4a32047d5d3edd0c44"
@@ -1448,9 +1456,9 @@ nested-error-stacks@^1.0.0:
   dependencies:
     inherits "~2.0.1"
 
-nivo-generators@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/nivo-generators/-/nivo-generators-0.6.0.tgz#ff7dfad1b7583947ed0a1699a99408286507149d"
+nivo-generators@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/nivo-generators/-/nivo-generators-0.8.0.tgz#204f56a595cd970cb20871f800614f8600a0b9d4"
   dependencies:
     d3-time "^1.0.7"
     d3-time-format "^2.0.5"
@@ -1458,15 +1466,16 @@ nivo-generators@^0.6.0:
     lodash.range "^3.2.0"
     lodash.shuffle "^4.2.0"
 
-nivo@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/nivo/-/nivo-0.17.0.tgz#2da78128aa567a2f4ca2de5d0d7a3628df526ad5"
+nivo@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/nivo/-/nivo-0.20.0.tgz#4713b28d75abbcb17260f25330dcc4b3c9d5e07b"
   dependencies:
     d3-chord "^1.0.4"
     d3-color "^1.0.3"
     d3-format "^1.2.0"
     d3-hierarchy "^1.1.5"
     d3-interpolate "^1.1.5"
+    d3-sankey "^0.7.1"
     d3-scale "^1.0.6"
     d3-scale-chromatic "^1.1.1"
     d3-shape "^1.2.0"
@@ -1478,7 +1487,7 @@ nivo@^0.17.0:
     prop-types "^15.5.10"
     react-measure "^2.0.2"
     react-motion "^0.5.0"
-    recompose "^0.24.0"
+    recompose "^0.25.0"
 
 node-fetch@^1.0.1:
   version "1.7.2"
@@ -1860,9 +1869,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-recompose@^0.24.0:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.24.0.tgz#262e93f974439eb17e7779824d88cce90492a5dd"
+recompose@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.25.0.tgz#e2ec723692ff0fdab3d62bd22c1da69af1985acd"
   dependencies:
     change-emitter "^0.1.2"
     fbjs "^0.8.1"

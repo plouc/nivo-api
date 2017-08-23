@@ -14,6 +14,7 @@ const {
     generateCountriesData,
     generateProgrammingLanguageStats,
     generateWinesTastes,
+    generateSankeyData,
 } = require('nivo-generators')
 
 const keys = ['hot dogs', 'burgers', 'sandwich', 'kebab', 'fries', 'donut']
@@ -111,6 +112,21 @@ module.exports = {
             },
             generateWinesTastes()
         ),
+    },
+    sankey: {
+        type: 'sankey',
+        props: {
+            width: 1400,
+            height: 800,
+            data: generateSankeyData({ nodeCount: 13, maxIterations: 2 }),
+            colors: 'd320b',
+            nodePaddingX: 3,
+            nodeOpacity: 1,
+            nodeWidth: 14,
+            nodeBorderWidth: 0,
+            linkOpacity: 0.15,
+            labelPadding: 20,
+        },
     },
     sunburst: {
         type: 'sunburst',

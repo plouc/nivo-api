@@ -23,8 +23,8 @@ module.exports = (schema, options = {}) => {
         Joi.validate(data, schema, { abortEarly: false }, (err, value) => {
             if (err) {
                 return res.status(400).json({
-                    errors: err.details.map(({ message }) => {
-                        return message
+                    errors: err.details.map(({ message, path }) => {
+                        return `${message}${path ? ` (${path})` : ''}`
                     }),
                 })
             }

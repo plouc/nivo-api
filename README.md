@@ -40,6 +40,7 @@ POST /charts/chord
 POST /charts/line
 POST /charts/pie
 POST /charts/radar
+POST /charts/sankey
 POST /charts/sunburst
 POST /charts/treemap
 ```
@@ -52,6 +53,7 @@ POST /charts/treemap
 - https://nivo-api.herokuapp.com/samples/chord.svg
 - https://nivo-api.herokuapp.com/samples/pie.svg
 - https://nivo-api.herokuapp.com/samples/radar.svg
+- https://nivo-api.herokuapp.com/samples/sankey.svg
 - https://nivo-api.herokuapp.com/samples/sunburst.svg
 - https://nivo-api.herokuapp.com/samples/treemap.svg
 

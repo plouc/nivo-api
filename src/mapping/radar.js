@@ -35,15 +35,15 @@ module.exports = {
             labelsTextColor: Joi.string(),
             labelsLinkColor: Joi.string(),
 
-            // markers
-            enableMarkers: Joi.boolean(),
-            markersSize: Joi.number().min(0),
-            markersColor: Joi.string(),
-            markersBorderWidth: Joi.number().min(0),
-            markersBorderColor: Joi.string(),
-            enableMarkersLabel: Joi.boolean(),
-            markersLabel: Joi.string(),
-            markersLabelYOffset: Joi.number(),
+            // dots
+            enableDots: Joi.boolean(),
+            dotSize: Joi.number().min(0),
+            dotColor: Joi.string(),
+            dotBorderWidth: Joi.number().min(0),
+            dotBorderColor: Joi.string(),
+            enableDotLabel: Joi.boolean(),
+            dotLabel: Joi.string(),
+            dotLabelYOffset: Joi.number(),
 
             // theming
             colors: Joi.string(),

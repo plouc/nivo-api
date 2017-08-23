@@ -8,24 +8,15 @@
  */
 'use strict'
 
-const bar = require('./bar')
-const bubble = require('./bubble')
-const calendar = require('./calendar')
-const chord = require('./chord')
-const line = require('./line')
-const pie = require('./pie')
-const radar = require('./radar')
-const sunburst = require('./sunburst')
-const treemap = require('./treemap')
-
 module.exports = {
-    bar,
-    bubble,
-    calendar,
-    chord,
-    line,
-    pie,
-    radar,
-    sunburst,
-    treemap,
+    bar: require('./bar'),
+    bubble: require('./bubble'),
+    calendar: require('./calendar'),
+    chord: require('./chord'),
+    line: require('./line'),
+    pie: require('./pie'),
+    radar: require('./radar'),
+    sankey: require('./sankey'),
+    sunburst: require('./sunburst'),
+    treemap: require('./treemap'),
 }
