@@ -13,6 +13,7 @@ module.exports = {
     bubble: require('./bubble'),
     calendar: require('./calendar'),
     chord: require('./chord'),
+    heatmap: require('./heatmap'),
     line: require('./line'),
     pie: require('./pie'),
     radar: require('./radar'),

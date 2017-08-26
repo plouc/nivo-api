@@ -15,7 +15,7 @@ const common = require('./common')
 module.exports = {
     component: Line,
     schema: Joi.object().keys(
-        Object.assign({}, common.dimensions, {
+        Object.assign({}, common.dimensions, common.axes, {
             // data
             data: Joi.array()
                 .items(
@@ -43,15 +43,13 @@ module.exports = {
                 .min(1)
                 .required(),
 
+            minY: Joi.alternatives().try(Joi.any().valid('auto'), Joi.number()).required(),
+            maxY: Joi.alternatives().try(Joi.any().valid('auto'), Joi.number()).required(),
+
             stacked: Joi.boolean(),
             curve: Joi.any().valid(curvePropKeys),
 
-            // axes & grid
-            axes: Joi.object(),
-            //axisTop: PropTypes.object,
-            //axisRight: PropTypes.object,
-            //axisBottom: PropTypes.object,
-            //axisLeft: PropTypes.object,
+            // grid
             enableGridX: Joi.boolean(),
             enableGridY: Joi.boolean(),
 
@@ -62,6 +60,8 @@ module.exports = {
             dotBorderWidth: Joi.number().min(0),
             dotBorderColor: Joi.string(),
             enableDotLabel: Joi.boolean(),
+            dotLabel: Joi.string(),
+            dotLabelYOffset: Joi.number(),
 
             // markers
             markers: Joi.array().items(

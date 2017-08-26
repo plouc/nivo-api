@@ -20,19 +20,6 @@ const {
 const keys = ['hot dogs', 'burgers', 'sandwich', 'kebab', 'fries', 'donut']
 
 module.exports = {
-    line: {
-        type: 'line',
-        props: {
-            width: 800,
-            height: 500,
-            data: generateDrinkStats(),
-            keys: ['whisky', 'rhum', 'gin', 'vodka', 'cognac'],
-            identity: 'country',
-            cumulative: false,
-            curve: 'monotoneX',
-            colors: 'nivo',
-        },
-    },
     bar: {
         type: 'bar',
         props: {
@@ -75,6 +62,20 @@ module.exports = {
             padAngle: 0.01,
             innerRadiusRatio: 0.98,
             innerRadiusOffset: 0.01,
+        },
+    },
+    heatmap: require('./heatmap'),
+    line: {
+        type: 'line',
+        props: {
+            width: 800,
+            height: 500,
+            data: generateDrinkStats(),
+            keys: ['whisky', 'rhum', 'gin', 'vodka', 'cognac'],
+            identity: 'country',
+            cumulative: false,
+            curve: 'monotoneX',
+            colors: 'nivo',
         },
     },
     pie: {

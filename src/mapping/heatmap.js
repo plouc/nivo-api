@@ -9,11 +9,11 @@
 'use strict'
 
 const Joi = require('joi')
-const { Bar } = require('nivo')
+const { HeatMap } = require('nivo')
 const common = require('./common')
 
 module.exports = {
-    component: Bar,
+    component: HeatMap,
     schema: Joi.object().keys(
         Object.assign({}, common.dimensions, common.axes, {
             // data
@@ -21,10 +21,18 @@ module.exports = {
             indexBy: Joi.string().required(),
             keys: Joi.array().sparse(false).min(1).unique().required(),
 
-            groupMode: Joi.any().valid(['grouped', 'stacked']),
-            layout: Joi.any().valid(['horizontal', 'vertical']),
+            minValue: Joi.alternatives().try(Joi.any().valid('auto'), Joi.number()).required(),
+            maxValue: Joi.alternatives().try(Joi.any().valid('auto'), Joi.number()).required(),
 
-            xPadding: Joi.number(),
+            forceSquare: Joi.boolean(),
+            sizeVariation: Joi.number().min(0).max(1),
+            padding: Joi.number(),
+
+            // cells
+            cellShape: Joi.any().valid(['rect', 'circle']),
+            cellOpacity: Joi.number().min(0).max(1),
+            cellBorderWidth: Joi.number().min(0),
+            cellBorderColor: Joi.string(),
 
             // grid
             enableGridX: Joi.boolean(),
@@ -32,16 +40,14 @@ module.exports = {
 
             // labels
             enableLabels: Joi.boolean(),
-            labelsTextColor: Joi.string(),
-            labelsLinkColor: Joi.string(),
+            labelTextColor: Joi.string(),
 
             // theming
             colors: Joi.string(),
-            colorBy: Joi.string(),
         })
     ),
-    runtimeProps: ['width', 'height', 'colors', 'groupMode'],
+    runtimeProps: ['width', 'height', 'colors'],
     defaults: {
-        margin: { top: 40, right: 50, bottom: 40, left: 50 },
+        margin: { top: 60, right: 0, bottom: 0, left: 60 },
     },
 }

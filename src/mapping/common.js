@@ -20,3 +20,24 @@ exports.dimensions = {
         left: Joi.number().integer(),
     }),
 }
+
+exports.axis = Joi.object()
+    .keys({
+        orient: Joi.any().valid('top', 'right', 'bottom', 'left'),
+
+        tickSize: Joi.number().min(0),
+        tickPadding: Joi.number(),
+        tickRotation: Joi.number(),
+
+        legend: Joi.string().empty(''),
+        legendPosition: Joi.any().valid('start', 'center', 'end'),
+        legendOffset: Joi.number(),
+    })
+    .allow(null)
+
+exports.axes = {
+    axisTop: exports.axis,
+    axisRight: exports.axis,
+    axisBottom: exports.axis,
+    axisLeft: exports.axis,
+}
