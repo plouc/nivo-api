@@ -33,7 +33,7 @@
     "express-winston": "^2.4.0",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
-    "nivo": "0.22.1",
+    "nivo": "0.28.1",
     "nivo-generators": "^0.8.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

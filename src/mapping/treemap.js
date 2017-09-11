@@ -30,6 +30,7 @@ module.exports = {
             innerPadding: Joi.number(),
             outerPadding: Joi.number(),
             colors: Joi.string(),
+            colorBy: Joi.string(),
             borderWidth: Joi.number(),
             borderColor: Joi.string(),
         })

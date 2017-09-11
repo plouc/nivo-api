@@ -53,6 +53,8 @@ module.exports = {
             enableGridX: Joi.boolean(),
             enableGridY: Joi.boolean(),
 
+            lineWidth: Joi.number().min(0),
+
             // dots
             enableDots: Joi.boolean(),
             dotSize: Joi.number().min(0),

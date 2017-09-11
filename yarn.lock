@@ -1242,10 +1242,6 @@ listr@^0.12.0:
     stream-to-observable "^0.1.0"
     strip-ansi "^3.0.1"
 
-lodash-es@^4.17.4:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
-
 lodash._baseassign@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lodash._baseassign/-/lodash._baseassign-3.2.0.tgz#8c38a099500f215ad09e59f1722fd0c52bfe0a4e"
@@ -1466,9 +1462,9 @@ nivo-generators@^0.8.0:
     lodash.range "^3.2.0"
     lodash.shuffle "^4.2.0"
 
-nivo@0.22.1:
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/nivo/-/nivo-0.22.1.tgz#93f7cd9de9a9aa54e1d9eb44dae9e3ae7581c8df"
+nivo@0.28.1:
+  version "0.28.1"
+  resolved "https://registry.yarnpkg.com/nivo/-/nivo-0.28.1.tgz#3bc7256788d412b8d88154b45afa3b48ed32ea2e"
   dependencies:
     d3-chord "^1.0.4"
     d3-color "^1.0.3"
@@ -1483,10 +1479,9 @@ nivo@0.22.1:
     d3-time-format "^2.0.5"
     d3-voronoi "^1.1.2"
     lodash "^4.17.4"
-    lodash-es "^4.17.4"
     prop-types "^15.5.10"
     react-measure "^2.0.2"
-    react-motion "^0.5.0"
+    react-motion "^0.5.1"
     recompose "^0.25.0"
 
 node-fetch@^1.0.1:
@@ -1823,9 +1818,9 @@ react-measure@^2.0.2:
     prop-types "^15.5.10"
     resize-observer-polyfill "^1.4.2"
 
-react-motion@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.0.tgz#1708fc2aee552900d21c1e6bed28346863e017b6"
+react-motion@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.1.tgz#b90631408175ab1668e173caccd66d41a44f4592"
   dependencies:
     performance-now "^0.2.0"
     prop-types "^15.5.8"

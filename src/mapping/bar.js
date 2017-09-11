@@ -23,17 +23,28 @@ module.exports = {
 
             groupMode: Joi.any().valid(['grouped', 'stacked']),
             layout: Joi.any().valid(['horizontal', 'vertical']),
+            reverse: Joi.boolean(),
 
-            xPadding: Joi.number(),
+            minValue: Joi.alternatives().try(Joi.any().valid('auto'), Joi.number()).required(),
+            maxValue: Joi.alternatives().try(Joi.any().valid('auto'), Joi.number()).required(),
+            padding: Joi.number(),
+            innerPadding: Joi.number(),
+
+            borderRadius: Joi.number().min(0),
+            borderWidth: Joi.number().min(0),
+            borderColor: Joi.string(),
 
             // grid
             enableGridX: Joi.boolean(),
             enableGridY: Joi.boolean(),
 
             // labels
-            enableLabels: Joi.boolean(),
-            labelsTextColor: Joi.string(),
-            labelsLinkColor: Joi.string(),
+            enableLabel: Joi.boolean(),
+            label: Joi.string(),
+            labelSkipWidth: Joi.number(),
+            labelSkipHeight: Joi.number(),
+            labelLinkColor: Joi.string(),
+            labelTextColor: Joi.string(),
 
             // theming
             colors: Joi.string(),

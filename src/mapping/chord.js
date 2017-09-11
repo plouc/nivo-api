@@ -16,14 +16,27 @@ module.exports = {
     component: Chord,
     schema: Joi.object().keys(
         Object.assign({}, common.dimensions, {
-            data: Joi.array().required(),
+            matrix: Joi.array().required(),
+            keys: Joi.array().required(),
+
             padAngle: Joi.number(),
             innerRadiusRatio: Joi.number().min(0).max(1),
             innerRadiusOffset: Joi.number().min(0).max(1),
+
             ribbonOpacity: Joi.number().min(0).max(1),
             ribbonBorderWidth: Joi.number().min(0),
+            ribbonBorderColor: Joi.string(),
+
             arcOpacity: Joi.number().min(0).max(1),
             arcBorderWidth: Joi.number().min(0),
+            arcBorderColor: Joi.string(),
+
+            // labels
+            enableLabel: Joi.boolean(),
+            label: Joi.string(),
+            labelOffset: Joi.number(),
+            labelRotation: Joi.number(),
+            labelTextColor: Joi.string(),
 
             // theming
             colors: Joi.string(),
