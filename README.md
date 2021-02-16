@@ -15,7 +15,7 @@ First you will have to make a post request on the desired endpoint, for example:
 curl -X POST \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json' \
-  -d '{ "width": 500, "height": 500, "data": [[223, 299, 345, 184], [123, 248, 65, 123], [412, 76, 187, 312], [97, 37, 502, 176]]}' \
+  -d '{ "width": 500, "height": 500, "matrix": [[223, 299, 345, 184], [123, 248, 65, 123], [412, 76, 187, 312], [97, 37, 502, 176]], "keys": ["A", "B", "C", "D"] }' \
   'http://localhost:3030/charts/chord'
 
 {
